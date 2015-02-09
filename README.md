@@ -6,15 +6,17 @@ Live <a href="http://lugovsky.github.io/angular-swipe-element/example.html" targ
 
 Basic usage
 ----------
-Define module as dependency!
+Add bower dependency.
+```bash
+bower install --save angular-swipe-element
+```
+Include script in you html file.
+```html
+<script type="text/javascript" src="bower_components/angular-swipe-element/angular-swipe-element.min.js"></script>
+```
+Define module as AngularJs dependency!
 ```javascript
 var app = angular.module('app', ['angular-swipe-element']);
-```
-Define the directive!
-```html
-<div swipe-element="onSwipeEnd(dir, deltaX, deltaY)" 
-     swipe-element-move="onSwipeMove(dir, deltaX, deltaY)" 
-     swipe-element-start="onSwipeStart(dir, deltaX, deltaY)"></div>
 ```
 Define the callbacks in controller!
 ```javascript
@@ -24,6 +26,13 @@ app.controller(function($scope) {
     $scope.onSwipeEnd = function(dir, deltaX, deltaY) { console.log('Released, direction: ' + dir + '. DeltaX: ' + deltaX + '; DeltaY: ' + deltaY); };
 });
 ```
+Define the directive!
+```html
+<div swipe-element="onSwipeEnd(dir, deltaX, deltaY)" 
+     swipe-element-move="onSwipeMove(dir, deltaX, deltaY)" 
+     swipe-element-start="onSwipeStart(dir, deltaX, deltaY)"></div>
+```
+
 You are ready! Enjoy the plugin.
 
 Directive attributes
