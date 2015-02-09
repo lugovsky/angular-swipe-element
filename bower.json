@@ -1,0 +1,21 @@
+{
+  "name": "angular-swipe-element",
+  "main": "angular-swipe-element.js",
+  "version": "0.0.1",
+  "authors": [
+    "Vladimir Lugovsky <lugovsky.v@gmail.com>"
+  ],
+  "description": "Small extension for AngularJs to add wider support of swipe events on element.",
+  "keywords": [
+    "angular",
+    "swipe",
+    "element",
+    "drag",
+    "node",
+    "touch"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "angular": "~1.x"
+  }
+}
