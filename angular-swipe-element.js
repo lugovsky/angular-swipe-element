@@ -48,23 +48,22 @@
                         direction = absDeltaY > absDeltaX ? verticalDirection : horizontalDirection;
                     }
 
-                    return {
-                        $event: {
-                            startX: x,
-                            startY: y,
-                            initialElementBounds: startBounds,
-                            triggerType: triggerType,
-                            source: event,
-                            
-                            x: posX,
-                            y: posY,
-                            deltaX: deltaX,
-                            deltaY: deltaY,
-                            dir: direction,
-                            vDir: verticalDirection,
-                            hDir: horizontalDirection
-                        }
+                    var res = {
+                        startX: x,
+                        startY: y,
+                        initialElementBounds: startBounds,
+                        triggerType: triggerType,
+                        source: event,
+                        
+                        x: posX,
+                        y: posY,
+                        deltaX: deltaX,
+                        deltaY: deltaY,
+                        dir: direction,
+                        vDir: verticalDirection,
+                        hDir: horizontalDirection
                     };
+                    return angular.extend({ $event: res }, res);
                 }
 
                 function _onDown(x, y, event, triggerType) {
